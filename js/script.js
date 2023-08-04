@@ -17,9 +17,6 @@ for (let i = 0; i < containers.length; i++) {
 }
 
 
-
-
-
 const botao = document.getElementById('btnEixo');
 
 botao.addEventListener('click', function () {
@@ -28,4 +25,39 @@ botao.addEventListener('click', function () {
   eixos.forEach((eixo) => {
     eixo.classList.toggle("desativo");
   });
+
 });
+
+
+
+
+
+
+
+
+
+var column = "column";
+var row = "row;  <= Padrão";
+var texto = column;
+
+let btnAlterarFlexDirection = document.getElementsByClassName("btn-flex-direction");/* 
+let codigosNasPaginas = document.getElementById("codigoNaPagina");
+codigosNasPaginas.textContent  = `${texto}`;  */
+
+for (let i = 0; i < btnAlterarFlexDirection.length; i++) {
+  btnAlterarFlexDirection[i].addEventListener('click', function () {
+
+
+
+    
+    let containers = document.querySelectorAll(".flex");
+    containers.forEach((container) => {
+    container.classList.toggle("direction-column");
+  });
+  });
+}
+/* 
+function mudarTexto() {
+  texto = texto === column ? row : column;
+  console.log(texto);
+} */
