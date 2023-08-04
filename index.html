@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/prism.css">
+        
+        <link rel="stylesheet"
+        href="css/style.css">
+        <title>FlexBox</title>
+    </head>
+    
+    <body>
+
+        <button id="btnEixo">eixo</button>
+
+        
+        <nav>
+            <menu class="links">
+                <li><a href="#flex"><p>display: flex</p></a></li>
+                <li><a href="#flex-direction"><p>flex-direction</p></a></li>
+                <li><a href="#justify-content"><p>justify-content</p></a></li>
+                <li><a href="#align-itens"><p>align-itens</p></a></li> 
+                <li><a href="#flex-wrap"><p>flex-wrap</p></a></li> 
+                <li><a href="#flex-flow"><p>flex-flow</p></a></li> 
+                <li><a href="#align-content"><p>align-content</p></a></li> 
+                <li><a href="#gap"><p>gap</p></a></li> 
+            </menu>
+        </nav>
+        
+        <div class="conteudo">
+            <section id="flex">
+                <pre>
+                    <code class="language-css">
+                        .container {
+                        
+                        }
+                    
+                    </code>
+                </pre>
+                <div class="container" id="container">
+                    <div class="filho a">1</div>
+                    <div class="filho b">2</div>
+                <div class="filho c">3</div>
+                <div class="filho d">4</div>
+            
+            </div>
+        
+        </section>
+        <section>
+            <pre>
+                <code class="language-css">
+                .container {
+                    display: flex;      
+                }
+            
+                </code>
+            </pre>
+            <div class="container flex">
+                <div class="filho a">1</div>
+                <div class="filho b">2</div>
+                <div class="filho c">3</div>
+                <div class="filho d">4</div>
+
+            </div>
+        
+        </section>
+
+
+        <section id="flex-direction">
+            <pre>
+                <code class="language-css">
+                .container {
+                    display: flex;
+                    flex-direction: column;      
+                }
+            
+                </code>
+            </pre>
+            <div class="container flex direction column">
+                <div class="filho a">1</div>
+                <div class="filho b">2</div>
+                <div class="filho c">3</div>
+                <div class="filho d">4</div>
+            </div>
+        
+        </section>
+        <section>
+            <pre>
+                <code class="language-css">
+                .container {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+            
+                </code>
+            </pre>
+            <div class="container flex direction row-reverse">
+                <div class="filho a">1</div>
+                <div class="filho b">2</div>
+                <div class="filho c">3</div>
+                <div class="filho d">4</div>
+            </div>
+        
+        </section>
+        <section>
+            <pre>
+                <code class="language-css">
+                .container {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            
+                </code>
+            </pre>
+            <div class="container flex direction column-reverse">
+                <div class="filho a">1</div>
+                <div class="filho b">2</div>
+                <div class="filho c">3</div>
+                <div class="filho d">4</div>
+            </div>
+        
+        </section>
+    </div>
+
+    <script src="/js/prism.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
