@@ -8,7 +8,6 @@ containersIndexArray.forEach((container) => {
 
 function addCard(container) {
     let cardCount = parseInt(container.dataset.cardCount);
-    console.log(cardCount);
     
     let newCard = document.createElement("div");
     cardCount++;
