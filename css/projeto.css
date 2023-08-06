@@ -1,6 +1,6 @@
 @font-face {
     font-family: din-round-bold;
-    src: url(/fonts/DINRoundPro-Bold.ttf) format('truetype');
+    src: url("../../flexbox/fonts/DINRoundPro-Bold.ttf") format('truetype');
 }
 
 /* CONFUGURAÇÕES GLOBAIS */
