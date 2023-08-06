@@ -1,0 +1,97 @@
+@font-face {
+    font-family: din-round-bold;
+    src: url(/fonts/DINRoundPro-Bold.ttf) format('truetype');
+}
+
+/* CONFUGURAÇÕES GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: din-round-bold;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    overflow: auto;
+}
+
+nav .container {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.links li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+/* CONTEUDO PRODUTOS */
+.conteudo {
+    margin: 10vh auto;
+    width: 80%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    background-color: #A8C8E4;
+}
+
+
+/* BOTÃO FIXO */
+.btn-mais, .btn-menos {
+    height: 30px;
+    width: 30px;
+    padding-bottom: 8px;
+    line-height: 0px;
+    font-size: 40px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn-mais {
+    position: fixed;
+    bottom: 20px;
+    right: 55px;
+    background-color: #128C7E;
+}
+.btn-menos {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f00;
+}
