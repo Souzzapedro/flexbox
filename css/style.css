@@ -1,11 +1,11 @@
 @font-face {
     font-family: din-round-bold;
-    src: url("../../flexbox/fonts/DINRoundPro-Bold.ttf") format('truetype');
+    src: url(/fonts/DINRoundPro-Bold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: din-round;
-    src: url("../../flexbox/fonts/DINRoundPro.ttf");
+    src: url(/fonts/DINRoundPro.ttf);
 }
 
 * {
