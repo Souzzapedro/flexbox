@@ -1,11 +1,11 @@
 @font-face {
     font-family: din-round-bold;
-    src: url(/fonts/DINRoundPro-Bold.ttf) format('truetype');
+    src: url("../../flexbox/fonts/DINRoundPro-Bold.ttf") format('truetype');
 }
 
 @font-face {
     font-family: din-round;
-    src: url(/fonts/DINRoundPro.ttf);
+    src: url("../../flexbox/fonts/DINRoundPro.ttf");
 }
 
 * {
@@ -46,8 +46,12 @@ nav {
     right: 2px;
     font-size: 25px;
     border: none;
-    background-color: #fff;
+    background-color: transparent;
     cursor: pointer;
+}
+
+.dark #fechar-nav {
+    color: #fff;
 }
 
 #btn-abrir-nav {
