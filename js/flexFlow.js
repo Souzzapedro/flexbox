@@ -40,56 +40,90 @@ function applyFlexStyles() {
     let classes = container.classList;
     container.classList.remove(...classes);
 
-    container.classList.add('container', 'flex-flow', 'flex', flexDirectionValue, flexWrapValue);
+    let tamanhoContainer;
+    let btnAbrirNav = document.getElementById("btn-abrir-nav");
+
+    if(btnAbrirNav.classList.contains("hidden")){
+        tamanhoContainer = "width-60vh";
+    }else {
+        tamanhoContainer = "width-85vh";
+    }
+
+
+    container.classList.add('container', 'flex-flow', 'flex', tamanhoContainer, flexDirectionValue, flexWrapValue);
     classes = container.classList;
     
     if (flexDirectionValue == 'direction-column' && flexWrapValue == 'flex-wrap-no-wrap') {
         addHidden();
-        column_NoWrap[0].classList.remove('hidden');
+        for(let i = 0; i < column_NoWrap.length; i++) {
+            column_NoWrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-column-reverse' && flexWrapValue == 'flex-wrap-no-wrap') {
         addHidden();
-        columnReverse_NoWrap[0].classList.remove('hidden');
+        for(let i = 0; i < columnReverse_NoWrap.length; i++) {
+            columnReverse_NoWrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row' && flexWrapValue == 'flex-wrap-no-wrap') {
         addHidden();
-        row_NoWrap[0].classList.remove('hidden');
+        for(let i = 0; i < row_NoWrap.length; i++) {
+            row_NoWrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row-reverse' && flexWrapValue == 'flex-wrap-no-wrap') {
         addHidden();
-        rowReverse_NoWrap[0].classList.remove('hidden');
+        for(let i = 0; i < rowReverse_NoWrap.length; i++) {
+            rowReverse_NoWrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-column' && flexWrapValue == 'flex-wrap-wrap') {
         addHidden();
-        column_Wrap[0].classList.remove('hidden');
+        for(let i = 0; i < column_Wrap.length; i++) {
+            column_Wrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-column-reverse' && flexWrapValue == 'flex-wrap-wrap') {
         addHidden();
-        columnReverse_Wrap[0].classList.remove('hidden');
+        for(let i = 0; i < columnReverse_Wrap.length; i++) {
+            columnReverse_Wrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row' && flexWrapValue == 'flex-wrap-wrap') {
         addHidden();
-        row_Wrap[0].classList.remove('hidden');
+        for(let i = 0; i < row_Wrap.length; i++) {
+            row_Wrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row-reverse' && flexWrapValue == 'flex-wrap-wrap') {
         addHidden();
-        rowReverse_Wrap[0].classList.remove('hidden');
+        for(let i = 0; i < rowReverse_Wrap.length; i++) {
+            rowReverse_Wrap[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-column' && flexWrapValue == 'flex-wrap-wrap-reverse') {
         addHidden();
-        column_WrapReverse[0].classList.remove('hidden');
+        for(let i = 0; i < column_WrapReverse.length; i++) {
+            column_WrapReverse[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-column-reverse' && flexWrapValue == 'flex-wrap-wrap-reverse') {
         addHidden();
-        columnReverse_WrapReverse[0].classList.remove('hidden');
+        for(let i = 0; i < columnReverse_WrapReverse.length; i++) {
+            columnReverse_WrapReverse[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row' && flexWrapValue == 'flex-wrap-wrap-reverse') {
         addHidden();
-        row_WrapReverse[0].classList.remove('hidden');
+        for(let i = 0; i < row_WrapReverse.length; i++) {
+            row_WrapReverse[i].classList.remove('hidden');
+        }
     }
     if (flexDirectionValue == 'direction-row-reverse' && flexWrapValue == 'flex-wrap-wrap-reverse') {
         addHidden();
-        rowReverse_WrapReverse[0].classList.remove('hidden');
+        for(let i = 0; i < rowReverse_WrapReverse.length; i++) {
+            rowReverse_WrapReverse[i].classList.remove('hidden');
+        }
     }
 }
 

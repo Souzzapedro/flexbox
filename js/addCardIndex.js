@@ -1,3 +1,5 @@
+
+
 var containersIndex = document.getElementsByClassName("container");
 var containersIndexArray = Array.from(containersIndex);
 
@@ -8,7 +10,6 @@ containersIndexArray.forEach((container) => {
 
 function addCard(container) {
     let cardCount = parseInt(container.dataset.cardCount);
-    console.log(cardCount);
     
     let newCard = document.createElement("div");
     cardCount++;
@@ -31,13 +32,13 @@ function removeCard(container) {
 /* Adicionar a todos os containers */
 function addCards() {
     containersIndexArray.forEach(container => {
-            addCard(container);
+        addCard(container);
     });
 }
 /* Deletar a todos os containers */
 function removeCards() {
     containersIndexArray.forEach(container => {
-            removeCard(container);
+        removeCard(container);
     });
 }
 
@@ -45,7 +46,7 @@ function removeCards() {
 let intervalId;
 
 function startAdding() {
-    intervalId = setInterval(() => addCards(), 200); // Chama a função addCard() a cada 100ms
+    intervalId = setInterval(() => addCards(), 150); // Chama a função addCard() a cada 100ms
 }
 
 function stopAdding() {
@@ -53,7 +54,7 @@ function stopAdding() {
 }
 
 function startRemoving() {
-    intervalId = setInterval(() => removeCards(), 200); // Chama a função removeCard() a cada 100ms
+    intervalId = setInterval(() => removeCards(), 150); // Chama a função removeCard() a cada 100ms
 }
 
 function stopRemoving() {
@@ -71,8 +72,17 @@ document.getElementById("menos").addEventListener("mouseup", stopRemoving);
 document.getElementById("menos").addEventListener("mouseout", stopRemoving);
 
 // Adicionar cards inicialmente para todos os containersIndexArray
-containersIndexArray.forEach(container => {
-    for (let i = 0; i < 4; i++) {
-        addCard(container);
-    }
+function inicializar() {
+    containersIndexArray.forEach(container => {
+        for (let i = 0; i < 4; i++) {
+            addCard(container);
+        }
+    });
+};
+inicializar();
+
+/* BTN ATUALIZAR */
+let atualizar = document.getElementById("btn-atualizar");
+atualizar.addEventListener("click", function() {
+    location.reload();
 });

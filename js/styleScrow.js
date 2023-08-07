@@ -1,8 +1,8 @@
-const sectionIds = ['flex-flow', 'flex-wrap', 'align-items', 'justify-content', 'flex-direction', 'display-flex'];
-        const divIds = ['btn-flex-flow', 'btn-flex-wrap', 'btn-align-items', 'btn-justify-content', 'btn-flex-direction', 'btn-display-flex'];
+const sectionIds = ['gap', 'align-content', 'flex-flow', 'flex-wrap', 'align-items', 'justify-content', 'flex-direction', 'display-flex'];
+        const divIds = ['btn-gap', 'btn-align-content', 'btn-flex-flow', 'btn-flex-wrap', 'btn-align-items', 'btn-justify-content', 'btn-flex-direction', 'btn-display-flex'];
 
         const options = {
-            threshold: 0.01 // O valor do threshold indica a porcentagem visível que o elemento precisa ter para disparar a função callback
+            threshold: 0.04 // O valor do threshold indica a porcentagem visível que o elemento precisa ter para disparar a função callback
         };
 
         function handleIntersection(entries, observer) {
@@ -22,7 +22,7 @@ const sectionIds = ['flex-flow', 'flex-wrap', 'align-items', 'justify-content', 
 
                 if (entry.isIntersecting) {
                     // Se a seção estiver visível na tela
-                    targetButton.style.backgroundColor = '#272822';
+                    targetButton.style.backgroundColor = '#393a37';
                     targetButton.style.color = '#fff';
                   } else {
                     // Se a seção não estiver visível na tela

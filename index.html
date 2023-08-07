@@ -15,54 +15,85 @@
 </head>
 
 <body>
-
+    
+    <div class="menu-fixed">
+    <button id="btn-atualizar"><i class="bi bi-arrow-clockwise"></i></button>
     <button id="btnEixo">eixo</button>
+    <input type="number" id="valueGapFixed" placeholder="gap" oninput="updateGapFixedTela()" min="0">
     <button class="btn-mais" id="mais">+</button>
     <button class="btn-menos" id="menos">-</button>
-
-    <nav>
-        <a href="#flex"><img src="/img/logo-flexbox.svg" alt="Logo flex-box"></a>
-        <menu class="links">
-            <li><a href="#flex">
-                    <p id="btn-display-flex" >display: flex</p>
-                </a></li>
-            <li><a href="#flex-direction">
-                    <p id="btn-flex-direction">flex-direction</p>
-                </a></li>
-            <li><a href="#justify-content">
-                    <p id="btn-justify-content">justify-content</p>
-                </a></li>
-            <li><a href="#align-items">
-                    <p id="btn-align-items">align-itens</p>
-                </a></li>
-            <li><a href="#flex-wrap">
-                    <p id="btn-flex-wrap">flex-wrap</p>
-                </a></li>
-            <li><a href="#flex-flow">
-                    <p id="btn-flex-flow">flex-flow</p>
-                </a></li>
-            <li><a href="#align-content">
-                    <p id="btn-align-content">align-content</p>
-                </a></li>
-            <li><a href="#gap">
-                    <p id="btn-gap">gap</p>
-                </a></li>
-            <li><a href="projeto.html" target="_blank">
-                    <p>PROJETO</p>
-                </a></li>
-        </menu>
-        <div class="dark-mode-button">
-            <input type="checkbox" class="checkbox" id="chk">
-
-            <label for="chk" class="label">
-                <i class="fas fa-sun"><img src="/img/sun.svg" alt="sun" class="svg-img"></i>
-                <i class="fas fa-moon"><img src="/img/moon.svg" alt="moon" class="svg-img"></i>
-                <div class="ball"></div>
-            </label>
+    <div class="dark-mode-button">
+        <input type="checkbox" class="checkbox" id="chk">
+    
+        <label for="chk" class="label">
+            <i class="fas fa-sun"><img src="/img/sun.svg" alt="sun" class="svg-img"></i>
+            <i class="fas fa-moon"><img src="/img/moon.svg" alt="moon" class="svg-img"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+    </div>
+    <button id="btn-hanburguer">
+        <i id="icon-menu" class="bi bi-list"></i>
+    </button>
+    
+    
+    <button id="btn-abrir-nav" class="hidden">
+        <i class="bi bi-list"></i>
+    </button>
+    
+    <nav id="nav">
+        <div>
+            <button id="fechar-nav"><i class="bi bi-x"></i></button>
+            <a href="#flex"><img src="/img/logo-flexbox.svg" alt="Logo flex-box" class="logo"></a>
+            <menu class="links">
+                <li><a href="#flex">
+                        <p id="btn-display-flex" >display: flex</p>
+                    </a></li>
+                <li><a href="#flex-direction">
+                        <p id="btn-flex-direction">flex-direction</p>
+                    </a></li>
+                <li><a href="#justify-content">
+                        <p id="btn-justify-content">justify-content</p>
+                    </a></li>
+                <li><a href="#align-items">
+                        <p id="btn-align-items">align-itens</p>
+                    </a></li>
+                <li><a href="#flex-wrap">
+                        <p id="btn-flex-wrap">flex-wrap</p>
+                    </a></li>
+                <li><a href="#flex-flow">
+                        <p id="btn-flex-flow">flex-flow</p>
+                    </a></li>
+                <li><a href="#align-content">
+                        <p id="btn-align-content">align-content</p>
+                    </a></li>
+                <li><a href="#gap">
+                        <p id="btn-gap">gap</p> 
+                    </a></li>
+            </menu>
         </div>
+
+
+        <div class="jogos">
+            <a href="https://codingfantasy.com/games/flexboxadventure" target="_blank" class="link-flexbox-adventure">
+                <div>
+                    <img class="img-flexboxAdventure" src="/img/flexboxAdventure.svg" alt="Jogo FlexBox Adventure">
+                </div>
+            </a>
+    
+            <div class="linkKahoot">
+                <a href="https://kahoot.it/" target="_blank"><img class="img-kahoot" src="img/kahoot.gif" alt="Jogo kahoot"></a>
+            </div>
+            
+            <div class="linkProjeto">
+                <a href="projeto.html" target="_blank">PROJETO</a>
+            </div>
+        </div>
+
+
     </nav>
 
-    <div class="conteudo">
+    <div class="conteudo margin-conteudo">
 
         <!-- Sem nada -->
         <section id="flex">
@@ -454,7 +485,7 @@
 
 
     <div id="align-items">
-        <section class="align-items">
+        <section class="align-items"> 
             <div class="aparecer-flex-direction hidden">
                 <pre class="texto-row">
                         <button class="btn-flex-direction">Alterar flex-direction</button>
@@ -493,10 +524,6 @@
             </pre>
 
             <div class="container flex  align-itens-center">
-<!--                 <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div> -->
             </div>
         </section>
           
@@ -539,10 +566,6 @@
             </pre>
 
             <div class="container flex  align-itens-flex-start">
- <!--                <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div> -->
             </div>
         </section>
         
@@ -585,10 +608,6 @@
             </pre>
 
             <div class="container flex  align-itens-flex-end">
-<!--                 <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div> -->
             </div>
         </section>
     </div>    
@@ -633,26 +652,6 @@
             </pre>
 
             <div class="container flex">
-<!--                 <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div>
-                <div class="filho a">5</div>
-                <div class="filho b">6</div>
-                <div class="filho c">7</div>
-                <div class="filho d">8</div>
-                <div class="filho a">9</div>
-                <div class="filho b">10</div>
-                <div class="filho c">11</div>
-                <div class="filho d">12</div>
-                <div class="filho a">13</div>
-                <div class="filho b">14</div>
-                <div class="filho c">15</div>
-                <div class="filho d">16</div>
-                <div class="filho a">17</div>
-                <div class="filho b">18</div>
-                <div class="filho c">19</div>
-                <div class="filho d">20</div> -->
             </div>
         </section>
   
@@ -695,26 +694,6 @@
             </pre>
 
             <div class="container flex flex-wrap-wrap">
-<!--                 <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div>
-                <div class="filho a">5</div>
-                <div class="filho b">6</div>
-                <div class="filho c">7</div>
-                <div class="filho d">8</div>
-                <div class="filho a">9</div>
-                <div class="filho b">10</div>
-                <div class="filho c">11</div>
-                <div class="filho d">12</div>
-                <div class="filho a">13</div>
-                <div class="filho b">14</div>
-                <div class="filho c">15</div>
-                <div class="filho d">16</div>
-                <div class="filho a">17</div>
-                <div class="filho b">18</div>
-                <div class="filho c">19</div>
-                <div class="filho d">20</div> -->
             </div>
         </section>
   
@@ -757,26 +736,6 @@
             </pre>
 
             <div class="container flex flex-wrap-wrap-reverse">
-<!--                 <div class="filho a">1</div>
-                <div class="filho b">2</div>
-                <div class="filho c">3</div>
-                <div class="filho d">4</div>
-                <div class="filho a">5</div>
-                <div class="filho b">6</div>
-                <div class="filho c">7</div>
-                <div class="filho d">8</div>
-                <div class="filho a">9</div>
-                <div class="filho b">10</div>
-                <div class="filho c">11</div>
-                <div class="filho d">12</div>
-                <div class="filho a">13</div>
-                <div class="filho b">14</div>
-                <div class="filho c">15</div>
-                <div class="filho d">16</div>
-                <div class="filho a">17</div>
-                <div class="filho b">18</div>
-                <div class="filho c">19</div>
-                <div class="filho d">20</div> -->
             </div>
         </section>
     </div>
@@ -784,133 +743,527 @@
         <section id="flex-flow">            
             <pre class="pre column-no-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column no-wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: column no-wrap
+        }
                 </code>
             </pre>
             
             <pre class="pre column-reverse-no-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column-reverse no-wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: column-reverse no-wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre row-no-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row no-wrap  <= Padrão
-                }
+        .container {
+            display: flex;
+            flex-flow: row no-wrap  <= Padrão
+        }
                 </code>
             </pre>
             
             <pre class="pre row-reverse-no-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row-reverse no-wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: row-reverse no-wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre column-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: column wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre column-reverse-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column-reverse wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: column-reverse wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre row-reverse-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row-reverse wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: row-reverse wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre row-wrap hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row wrap
-                }
+        .container {
+            display: flex;
+            flex-flow: row wrap
+        }
                 </code>
             </pre>
 
             <pre class="pre column-wrap-reverse hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column wrap-reverse
-                }
+        .container {
+            display: flex;
+            flex-flow: column wrap-reverse
+        }
                 </code>
             </pre>
 
             <pre class="pre column-reverse-wrap-reverse hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: column-reverse wrap-reverse
-                }
+        .container {
+            display: flex;
+            flex-flow: column-reverse wrap-reverse
+        }
                 </code>
             </pre>
 
             <pre class="pre row-reverse-wrap-reverse hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row-reverse wrap-reverse
-                }
+        .container {
+            display: flex;
+            flex-flow: row-reverse wrap-reverse
+        }
                 </code>
             </pre>
 
             <pre class="pre row-wrap-reverse hidden">
                 <code class="language-css">
-                .container {
-                    display: flex;
-                    flex-flow: row wrap-reverse
-                }
+        .container {
+            display: flex;
+            flex-flow: row wrap-reverse
+        }
                 </code>
             </pre>
 
 
+            <h3 class="text-flex-direction">flex-direction:</h3>
+            <label class="btn-flex-flow btn-flex-direction-column"><input type="radio" name="flex-direction" value="direction-column" class="radio-flex-direction"><p>column</p></label>
+            <label class="btn-flex-flow btn-flex-direction-column-reverse"><input type="radio" name="flex-direction" value="direction-column-reverse" class="radio-flex-direction"><p>column-reverse</p></label>
+            <label class="btn-flex-flow btn-flex-direction-row"><input type="radio" name="flex-direction" value="direction-row" class="radio-flex-direction" checked><p>row</p></label>
+            <label class="btn-flex-flow btn-flex-direction-row-reverse"><input type="radio" name="flex-direction" value="direction-row-reverse" class="radio-flex-direction"><p>row-reverse</p></label>
+            <h3 class="text-flex-wrap">flex-wrap:</h3>
+            <label class="btn-flex-flow btn-flex-wrap-no-wrap"><input type="radio" name="flex-wrap" value="flex-wrap-no-wrap" class="radio-flex-wrap" checked><p>no-wrap</p></label>
+            <label class="btn-flex-flow btn-flex-wrap-wrap"><input type="radio" name="flex-wrap" value="flex-wrap-wrap" class="radio-flex-wrap"><p>wrap</p></label>
+            <label class="btn-flex-flow btn-flex-wrap-wrap-reverse"><input type="radio" name="flex-wrap" value="flex-wrap-wrap-reverse" class="radio-flex-wrap"><p>wrap-reverse</p></label>
             
 
             <div id="semOverflowHidden" class="container flex-flow flex flex-wrap-wrap-reverse">
 
-                <h3 class="text-flex-direction">flex-direction:</h3>
-                <label class="btn-flex-flow btn-flex-direction-column"><input type="radio" name="flex-direction" value="direction-column" class="radio-flex-direction"><p>column</p></label>
-                <label class="btn-flex-flow btn-flex-direction-column-reverse"><input type="radio" name="flex-direction" value="direction-column-reverse" class="radio-flex-direction"><p>column-reverse</p></label>
-                <label class="btn-flex-flow btn-flex-direction-row"><input type="radio" name="flex-direction" value="direction-row" class="radio-flex-direction" checked><p>row</p></label>
-                <label class="btn-flex-flow btn-flex-direction-row-reverse"><input type="radio" name="flex-direction" value="direction-row-reverse" class="radio-flex-direction"><p>row-reverse</p></label>
-                <h3 class="text-flex-wrap">flex-wrap:</h3>
-                <label class="btn-flex-flow btn-flex-wrap-no-wrap"><input type="radio" name="flex-wrap" value="flex-wrap-no-wrap" class="radio-flex-wrap" checked><p>no-wrap</p></label>
-                <label class="btn-flex-flow btn-flex-wrap-wrap"><input type="radio" name="flex-wrap" value="flex-wrap-wrap" class="radio-flex-wrap"><p>wrap</p></label>
-                <label class="btn-flex-flow btn-flex-wrap-wrap-reverse"><input type="radio" name="flex-wrap" value="flex-wrap-wrap-reverse" class="radio-flex-wrap"><p>wrap-reverse</p></label>
 
             </div>
         </section>
 
+    <div id="align-content">
+        <section class="align-content">
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: center;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: center;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: center;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-center">
+            </div>       
+        </section>
+ 
+        <section class="align-content">
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: flex-start;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: flex-start;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: flex-start;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-flex-start">
+            </div>        
+        </section>
+
+        <section class="align-content"> 
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: flex-end;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: flex-end;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: flex-end;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-flex-end">
+            </div>
+        </section>
+        
+        <section class="align-content">
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: space-between;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: space-between;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: space-between;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-space-between">
+            </div>
+        </section>
+
+        <section class="align-content">
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: space-around;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: space-around;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: space-around;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-space-around">
+            </div>
+        </section>
+
+        <section class="align-content">
+            <div class="aparecer-flex-direction hidden">
+                <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: row wrap;
+                            align-content: space-evenly;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            flex-flow: column wrap;
+                            align-content: space-evenly;
+                        }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 245px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            align-content: space-evenly;
+                        }
+                        
+                </code>
+            </pre>
+
+            <div class="container flex direction-row flex-wrap-wrap align-content-space-evenly">
+            </div>
+        </section>    
+    </div>
+        
+
+    <div id="gap">
+    <section class="gap" >
+    <div class="aparecer-flex-direction hidden">
+        <pre class="texto-row">
+                    <button class="btn-flex-direction">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                        .container {
+                            display: flex;
+                            gap:         px;
+                            flex-flow: row wrap;
+                            align-content: center;
+                        }
+                    </code>
+                </pre>
+                <pre class="texto-column hidden">
+                    <button class="btn-flex-direction">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                <code class="language-css">
+                        .container {
+                            display: flex;
+                            gap:         px;
+                            flex-flow: column wrap;
+                            align-content: center;
+                        }
+                </code>
+            </pre>
+        </div>
+        
+        <pre class="pre-padrao" style="height: 270px;">
+                <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+            <code class="language-css">
+                        .container {
+                            display: flex;
+                            gap:         px;
+                            align-content: center;
+                        }                 
+            </code>
+        </pre>
+
+        <input type="number" id="valueGap" oninput="updateGap()" placeholder="digite" min="0">
+        <div class="container gap flex direction-row flex-wrap-wrap align-content-center">
+        </div>       
+    </section>
+        
+        
+        <section class="gap" >
+        <div class="aparecer-flex-direction hidden">
+            <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                        <code class="language-css">
+                            .container {
+                                display: flex;
+                                row-gap: 50px;
+                                align-content: center;
+                                flex-flow: row wrap;
+                            }
+                        </code>
+                    </pre>
+                    <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                            .container {
+                                display: flex;
+                                row-gap: 50px;
+                                align-content: center;
+                                flex-flow: column wrap;
+                            }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 270px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                            .container {
+                                display: flex;
+                                row-gap: 50px;
+                                align-content: center;
+                            }                 
+                </code>
+            </pre>
+    
+            <div class="container gap flex direction-row flex-wrap-wrap align-content-center" style="row-gap: 50px;">
+            </div>       
+        </section>
+        
+        
+        <section class="gap" >
+        <div class="aparecer-flex-direction hidden">
+            <pre class="texto-row">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                        <code class="language-css">
+                            .container {
+                                display: flex;
+                                column-gap: 50px;
+                                align-content: center;
+                                flex-flow: row wrap;
+                            }
+                        </code>
+                    </pre>
+                    <pre class="texto-column hidden">
+                        <button class="btn-flex-direction">Alterar flex-direction</button>
+                        <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-fill"></i></button>
+                    <code class="language-css">
+                            .container {
+                                display: flex;
+                                column-gap: 50px;
+                                align-content: center;
+                                flex-flow: column wrap;
+                            }
+                    </code>
+                </pre>
+            </div>
+            
+            <pre class="pre-padrao" style="height: 270px;">
+                    <button class="btn-flex-direction hidden">Alterar flex-direction</button>
+                    <button class="btn-aparecerBtnFlexDirection"><i class="bi bi-eye-slash-fill"></i></button>
+                <code class="language-css">
+                            .container {
+                                display: flex;
+                                column-gap: 50px;
+                                align-content: center;
+                            }                 
+                </code>
+            </pre>
+    
+            <div class="container gap flex direction-row flex-wrap-wrap align-content-center" style="column-gap: 50px;">
+            </div>       
+        </section>
+    </div>
+
+
+
         <footer>
             <div class="container-footer">
-                <p>&copy; 2023 Pedro Lucas Souza. Todos os direitos reservados.</p>
+                <p>&copy; 2023 Pedro Souza - Pedro Henrique - Bernado - Igor . Todos os direitos reservados.</p>
                 <div class="redes">
                     <ul>
                         <li>
@@ -932,14 +1285,17 @@
     </div>
 
 
-    <script src="/js/prism.js"></script>
-    <script src="/js/darkMode.js"></script>
-    <script src="/js/eixo.js"></script>
-    <script src="/js/addCardIndex.js"></script>
-    <script src="/js/styleScrow.js"></script>
-    <script src="/js/aparecerBtnFlexDirection.js"></script>
-    <script src="/js/flexFlow.js"></script>
-    <script src="/js/script.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/menuFixed.js"></script>
+    <script src="js/eixo.js"></script>
+    <script src="js/addCardIndex.js"></script>
+    <script src="js/styleScrow.js"></script>
+    <script src="js/aparecerBtnFlexDirection.js"></script>
+    <script src="js/flexFlow.js"></script>
+    <script src="js/gapUpdate.js"></script>
+    <script src="js/fecharNavBar.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
