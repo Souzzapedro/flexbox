@@ -28,29 +28,26 @@ function applyFlexStyles() {
         if (radioButton.checked) {
             flexDirectionValue = radioButton.value;
         }
-    });
 
+        /* Removendo as classes */
+        if(container.classList.contains(radioButton.value)){
+            container.classList.remove(radioButton.value);
+        }
+    });
+    
     flexWrapArray.forEach(radioButton => {
         if (radioButton.checked) {
             flexWrapValue = radioButton.value;
         }
+        
+        /* Removendo as classes */
+        if(container.classList.contains(radioButton.value)){
+            container.classList.remove(radioButton.value);
+        }
     });
-
-    /* Removendo todas as classes */
-    let classes = container.classList;
-    container.classList.remove(...classes);
-
-    let tamanhoContainer;
-    let btnAbrirNav = document.getElementById("btn-abrir-nav");
-
-    if(btnAbrirNav.classList.contains("hidden")){
-        tamanhoContainer = "width-60vh";
-    }else {
-        tamanhoContainer = "width-85vh";
-    }
-
-
-    container.classList.add('container', 'flex-flow', 'flex', tamanhoContainer, flexDirectionValue, flexWrapValue);
+    
+    
+    container.classList.add(flexDirectionValue, flexWrapValue);
     classes = container.classList;
     
     if (flexDirectionValue == 'direction-column' && flexWrapValue == 'flex-wrap-no-wrap') {

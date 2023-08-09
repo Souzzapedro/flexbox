@@ -1,9 +1,15 @@
 let menusFixed = Array.from(document.getElementsByClassName("menu-fixed"));
 function adicionarHidden() {
     menusFixed.forEach(menuFixed => {
-        if (!menuFixed.classList.contains('hidden')) {
-            menuFixed.classList.add('hidden');
+        if (!menuFixed.classList.contains('opacity')) {
+            menuFixed.classList.add('opacity');
         }
+        
+        setTimeout(() => {
+            if (!menuFixed.classList.contains('hidden')) {
+                menuFixed.classList.add('hidden');
+            }
+        }, 400);
     });
 }
 function removerHidden() {
@@ -11,6 +17,13 @@ function removerHidden() {
         if (menuFixed.classList.contains('hidden')) {
             menuFixed.classList.remove('hidden');
         }
+
+
+        setTimeout(() => {
+            if (menuFixed.classList.contains('opacity')) {
+                menuFixed.classList.remove('opacity');
+            }
+        }, 100);
     });
 }
 
@@ -35,3 +48,7 @@ btnHanburguer.addEventListener("click", function() {
 });
 
 adicionarHidden();
+
+
+
+

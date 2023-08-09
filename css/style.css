@@ -1,11 +1,11 @@
 @font-face {
     font-family: din-round-bold;
-    src: url("../../flexbox/fonts/DINRoundPro-Bold.ttf") format('truetype');
+    src: url(/fonts/DINRoundPro-Bold.ttf) format('truetype');
 }
 
 @font-face {
     font-family: din-round;
-    src: url("../../flexbox/fonts/DINRoundPro.ttf");
+    src: url(/fonts/DINRoundPro.ttf);
 }
 
 * {
@@ -14,13 +14,19 @@
     font-family: din-round-bold;
 }
 
-body, nav {
+body,
+nav {
     transition: background-color .3s ease-in-out;
+}
+
+body {
+    background-color: #fff;
 }
 
 body.dark {
     background-color: #343541;
 }
+
 
 .dark nav {
     background-color: #202123;
@@ -28,8 +34,6 @@ body.dark {
 
 nav {
     border-right: 1px solid #777;
-    height: 100vh;
-    width: 250px;
     position: fixed;
     background-color: #fff;
     z-index: 99999;
@@ -39,15 +43,28 @@ nav {
     overflow-y: auto;
 }
 
+.width-250px {
+    width: 250px;
+}
+
+.width-100vw {
+    width: 100vw;
+}
+
+.height-100vh {
+    height: 100vh;
+}
+
 
 #fechar-nav {
     position: absolute;
     top: 0px;
     right: 2px;
-    font-size: 25px;
+    font-size: 2rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    transition:  .3s ease-in-out;
 }
 
 .dark #fechar-nav {
@@ -61,11 +78,20 @@ nav {
     border: none;
     cursor: pointer;
     padding: 5px 7px;
-    background-color: #ccc;
-    color: #000;
     border-radius: 5px;
     font-size: 20px;
     width: 54px;
+    z-index: 99999;
+}
+
+.btns-menu-color-default {
+    background-color: #ccc;
+    color: #000;
+}
+
+.btns-menu-color-responsivo {
+    background-color: #333;
+    color: #fff;
 }
 
 
@@ -101,28 +127,24 @@ nav .logo {
 }
 
 
-
-
-
 /* LiNKS DOS JOGOS */
-.img-flexboxAdventure, .img-kahoot {
+
+.img-flexboxAdventure,
+.img-kahoot {
     width: 100%;
 }
-.link-flexbox-adventure{
-    display: block;
+
+.linkKahoot ,
+.link-flexbox-adventure {
+    background-color: #000;
     text-decoration: none;
     height: 60px;
-}
-
-.linkKahoot, .link-flexbox-adventure div{
-    height: 60px; 
     overflow: hidden;
-    position: relative;
 }
 
 .linkProjeto {
     height: 60px;
-    width: 100%; 
+    width: 100%;
 }
 
 .linkProjeto a {
@@ -130,16 +152,47 @@ nav .logo {
     text-decoration: none;
     height: 100%;
     width: 100%;
-    background-color: #128C7E;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 22px;
+}
+
+.linkProjeto.flexbox a {
+    background-color: #128C7E;
     color: #551a8b;
 }
 
+
+.linkProjeto.grid a {
+    color: #777;
+    background-color: #fff;
+}
+
+.linkProjeto.grid a:hover {
+    background-color: #eee;
+    color: #000;
+}
+
+.dark .linkProjeto.grid a {
+    background-color: #202123;
+    color: #777;
+}
+
+.dark .linkProjeto.grid a:hover {
+    background-color: #393a37;
+    color: #fff;
+}
+
+
+
+
 .margin-conteudo {
     margin: 0 0 0 250px;
+}
+
+.margin-0 {
+    margin: 0;
 }
 
 .conteudo {
@@ -147,18 +200,23 @@ nav .logo {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 section {
     margin-bottom: 20%;
 }
 
-.width-60vh {
+.width-60vw {
     width: 60vw;
 }
 
-.width-85vh {
-    width: 85vw;
+.width-80vw {
+    width: 80vw;
+}
+
+.width-96vw {
+    width: 96vw;
 }
 
 .container {
@@ -241,7 +299,7 @@ pre {
 }
 
 .btn-flex-direction {
-    top: 10px;  
+    top: 10px;
     right: 55px;
     position: absolute;
     height: 40px;
@@ -291,36 +349,42 @@ pre {
     gap: 5px;
     align-items: center;
 }
-.btn-flex-flow p{
+
+.btn-flex-flow p {
     padding-bottom: 4px;
 }
-#flex-flow h3{
+
+#flex-flow h3 {
     color: #ccc;
 }
 
-.text-flex-direction, 
+.text-flex-direction,
 .btn-flex-direction-column,
 .btn-flex-direction-column-reverse,
 .btn-flex-direction-row,
-.btn-flex-direction-row-reverse
-{
+.btn-flex-direction-row-reverse {
     position: absolute;
     right: 210px;
 }
+
 .text-flex-direction {
     position: absolute;
     right: 254px;
     top: 15px;
 }
+
 .btn-flex-direction-column {
     top: 40px;
 }
+
 .btn-flex-direction-column-reverse {
     top: 75px;
 }
+
 .btn-flex-direction-row {
     top: 110px;
 }
+
 .btn-flex-direction-row-reverse {
     top: 145px;
 }
@@ -328,22 +392,25 @@ pre {
 .text-flex-wrap,
 .btn-flex-wrap-wrap,
 .btn-flex-wrap-wrap-reverse,
-.btn-flex-wrap-no-wrap
-{
+.btn-flex-wrap-no-wrap {
     position: absolute;
     right: 30px;
 }
+
 .text-flex-wrap {
     position: absolute;
     right: 107px;
     top: 15px;
 }
+
 .btn-flex-wrap-wrap {
     top: 40px;
 }
+
 .btn-flex-wrap-wrap-reverse {
     top: 75px;
 }
+
 .btn-flex-wrap-no-wrap {
     top: 110px;
 }
@@ -365,6 +432,12 @@ pre {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transition: .4s ease-in-out;
+    z-index: 9999;
+}
+
+.opacity {
+    opacity: 0;
 }
 
 #btn-hanburguer {
@@ -372,14 +445,14 @@ pre {
     bottom: 20px;
     right: 20px;
     padding: 5px 7px;
-    background-color: #ccc;
     border: none;
-    color: #000;
     border-radius: 5px;
     cursor: pointer;
     font-size: 20px;
     width: 54px;
+    z-index: 999;
 }
+
 
 #btn-atualizar {
     padding: 2px 7px;
@@ -401,9 +474,10 @@ pre {
     width: 54px;
     position: absolute;
     top: 141px;
-    left: 300px;
+    left: 130px;
     border-radius: 5px;
 }
+
 #valueGapFixed {
     background-color: #000;
     color: #fff;
@@ -430,10 +504,13 @@ pre {
 .btn-mais {
     background-color: #128C7E;
 }
+
 .btn-menos {
     background-color: #f00;
 }
-.btn-mais, .btn-menos {
+
+.btn-mais,
+.btn-menos {
     height: 30px;
     width: 54px;
     padding-bottom: 8px;
@@ -450,7 +527,7 @@ pre {
 .dark-mode-button label {
     -webkit-tap-highlight-color: transparent;
 }
-  
+
 
 .checkbox {
     opacity: 0;
@@ -461,15 +538,15 @@ pre {
     background-color: #272822;
     border-radius: 50px;
     cursor: pointer;
-    
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    padding: 5px;
+
+    padding: 4px 5px 5px 5px;
     height: 9px;
-    width: 28px;
-    margin: 6px 0 7px 8px;
+    width: 26px;
+    margin: 6px 0 7px 9px;
     transition: .3s ease;
     transform: scale(1.5);
 }
@@ -477,6 +554,7 @@ pre {
 .dark .label {
     background-color: #fff;
 }
+
 .dark .label .ball {
     background-color: #272822;
 }
@@ -488,21 +566,27 @@ pre {
     top: 2px;
     left: 2px;
 
-    height: 15px;
-    width: 15px;
-    
+    height: 14px;
+    width: 14px;
+
     transform: translateX(0px);
     transition: 0.2s linear;
 }
 
-.checkbox:checked + .label .ball {
-    transform: translateX(19px);
+.checkbox:checked+.label .ball {
+    transform: translateX(18px);
 }
 
-
 .svg-img {
-    width: 12px;
-    height: 12px;
+    width: 11px;
+    height: 11px;
+}
+
+.fa-sun {
+    margin-left: -1px;
+}
+.fa-moon {
+    margin-right: -1px;
 }
 
 
@@ -600,6 +684,7 @@ pre {
 .flex-wrap-wrap {
     flex-wrap: wrap;
 }
+
 .flex-wrap-no-wrap {
     flex-wrap: nowrap;
 }
@@ -613,18 +698,23 @@ pre {
 .align-content-center {
     align-content: center;
 }
+
 .align-content-flex-start {
     align-content: flex-start;
 }
+
 .align-content-flex-end {
     align-content: flex-end;
 }
+
 .align-content-space-between {
     align-content: space-between;
 }
+
 .align-content-space-around {
     align-content: space-around;
 }
+
 .align-content-space-evenly {
     align-content: space-evenly;
 }
@@ -642,13 +732,13 @@ pre {
 
 /* FOOTER */
 .container-footer {
-    display: flex;  
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: 80vw;
 }
 
-footer{
+footer {
     background-color: black;
     display: flex;
     align-items: center;
@@ -658,7 +748,7 @@ footer{
     z-index: -1;
 }
 
-footer .redes{
+footer .redes {
     width: 50%;
 }
 
@@ -686,4 +776,114 @@ footer ul {
 
 footer li {
     padding: 20px;
+}
+
+
+
+@media(max-width: 1300px) {
+    .container-footer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    footer p {
+        width: 70%;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width: 1250px) {
+
+    #flex-flow {
+        margin-top: 300px;
+    }
+    #flex-flow h3{
+        color: #222;
+    }
+
+
+
+    .text-flex-direction,
+    .btn-flex-direction-column,
+    .btn-flex-direction-column-reverse,
+    .btn-flex-direction-row,
+    .btn-flex-direction-row-reverse {
+        position: absolute;
+        right: 210px;
+    }
+
+    .text-flex-direction {
+        position: absolute;
+        right: 254px;
+        top: -170px;
+    }
+
+    .btn-flex-direction-column {
+        top: -135px;
+    }
+
+    .btn-flex-direction-column-reverse {
+        top: -100px;
+    }
+
+    .btn-flex-direction-row {
+        top: -65px;
+    }
+
+    .btn-flex-direction-row-reverse {
+        top: -30px;
+    }
+
+    .text-flex-wrap,
+    .btn-flex-wrap-wrap,
+    .btn-flex-wrap-wrap-reverse,
+    .btn-flex-wrap-no-wrap {
+        position: absolute;
+        right: 30px;
+    }
+
+    .text-flex-wrap {
+        position: absolute;
+        right: 107px;
+        top: -170px;
+    }
+
+    .btn-flex-wrap-wrap {
+        top: -135px;
+    }
+
+    .btn-flex-wrap-wrap-reverse {
+        top: -100px;
+    }
+
+    .btn-flex-wrap-no-wrap {
+        top: -65px;
+    }
+}
+
+@media(max-width: 860px) {
+    pre {
+        max-width: 96vw;
+    }
+
+    .linkKahoot ,
+    .link-flexbox-adventure {
+        height: min-content;
+    }
+
+    .linkProjeto {
+        height: 100px;
+    }
+
+    .jogos {
+        margin-top: 100px;
+        
+        justify-content: space-around;
+        justify-content: space-between;
+        justify-content: space-evenly;
+    }
+
+    nav .logo {
+        margin-top: 5%;
+    }
 }
